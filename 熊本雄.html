@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #bear {
+        width: 200px;
+        height: 200px;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 100px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: black;
+      }
+
+
+
+      .ear::before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        background: white;
+        border: 10px solid black;
+        border-radius: 40px;
+        position: absolute;
+        top: 10%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+      }
+
+      .ear::after {
+        content: "";
+        width: 25px;
+        height: 25px;
+        background: white;
+        border: 10px solid black;
+        border-radius: 40px;
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+      }
+
+      .eye_left::before {
+        content: "";
+        width: 30px;
+        height: 30px;
+        border: 8px solid white;
+        border-radius: 40px;
+        position: absolute;
+        top: 35%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+      }
+
+      .eye_left::after {
+        content: "";
+        width: 60px;
+        height: 60px;
+        background: red;
+        border-radius: 40px;
+        position: absolute;
+        top: 60%;
+        left: 5%;
+        transform: translate(-50%, -50%);
+      }
+
+      .eye_right::before {
+        content: "";
+        width: 30px;
+        height: 30px;
+        border: 8px solid white;
+        border-radius: 40px;
+        position: absolute;
+        top: 35%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+      }
+
+      .eye_right::after {
+        content: "";
+        width: 60px;
+        height: 60px;
+        background: red;
+        border-radius: 40px;
+        position: absolute;
+        top: 60%;
+        left: 95%;
+        transform: translate(-50%, -50%);
+      }
+
+      .nose_mouth {
+        width: 100px;
+        height: 60px;
+        border-radius: 100px/60px;
+        background: white;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .nose_mouth::before {
+        content: "";
+        width: 25px;
+        height: 15px;
+        border-radius: 100px/60px;
+        background: rgb(0, 0, 0);
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .nose_mouth::after {
+        content: "";
+        width: 60px;
+        height: 20px;
+        border-radius: 80px/30px;
+        background: rgb(0, 0, 0);
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .v-mark {
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 35px 50px 0px 50px;
+        border-color: rgb(255, 255, 255) transparent transparent transparent;
+        position: absolute;
+        top: 88%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .v-mark::before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 22px 30px 0px 30px;
+        border-color: rgb(0, 0, 0) transparent transparent transparent;
+        position: absolute;
+        transform: translate(-50%, -180%);
+      }
+
+      .v-mark::after {
+        content: "";
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 18px 30px 0px 30px;
+        border-color: rgb(0, 0, 0) transparent transparent transparent;
+        position: absolute;
+        transform: translate(-50%, -60%);
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div id="bear">
+      <div class="ear"></div>
+      <div class="eye_left"></div>
+      <div class="eye_right"></div>
+      <div class="nose_mouth"></div>
+      <div class="v-mark"></div>
+  </body>
+
+</html>
