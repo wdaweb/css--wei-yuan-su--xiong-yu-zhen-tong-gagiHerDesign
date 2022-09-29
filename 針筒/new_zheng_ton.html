@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /* .linear {
+      background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(224, 224, 224) 20%, rgb(255, 255, 255) 100%, transparent 50%);
+    } */
+
+    /* 最底層 */
+    .back {
+      width: 825px;
+      height: 100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 0.5px solid rgb(130, 130, 130);
+      background-color: rgb(239, 239, 239);
+      border-radius: 0 10px 10px 0;
+      background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(224, 224, 224) 20%, rgb(255, 255, 255) 100%, transparent 50%);
+    }
+
+    .back::before {
+      content: '';
+      width: 150px;
+      height: 0px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(272%, -50%);
+      border: 1px solid black;
+      z-index: 1;
+    }
+
+    .center {
+      width: 625px;
+      height: 150px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-47%, -50%);
+      border: 0.5px solid rgb(130, 130, 130);
+      background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(224, 224, 224) 20%, rgb(255, 255, 255) 100%);
+    }
+
+
+    /* 黃色部分 */
+    .center::before {
+      content: "";
+      width: 280px;
+      height: 150px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(11%, -50%);
+      background:
+        linear-gradient(0deg, rgb(250, 255, 190) 0%, rgb(224, 224, 224) 20%, rgb(250, 255, 190) 50%);
+    }
+
+    .center::after {
+      content: '';
+      width: 625px;
+      height: 25px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg,
+          transparent 0%, transparent 5%,
+          rgb(40, 40, 40) 5%, rgb(40, 40, 40) 5%,
+          transparent 5.5%, transparent 10.5%,
+          rgb(40, 40, 40) 10.5%, rgb(40, 40, 40) 10.5%,
+          transparent 11%, transparent 16%,
+          rgb(40, 40, 40) 16%, rgb(40, 40, 40) 16%,
+          transparent 16.5%, transparent 21.5%,
+          rgb(40, 40, 40) 21.5%, rgb(40, 40, 40) 21.5%,
+          transparent 22%, transparent 27%,
+          rgb(40, 40, 40) 27%, rgb(40, 40, 40) 27%,
+          transparent 27.5%, transparent 32.5%,
+          rgb(40, 40, 40) 32.5%, rgb(40, 40, 40) 32.5%,
+          transparent 33%, transparent 38%,
+          rgb(40, 40, 40) 38%, rgb(40, 40, 40) 38%,
+          transparent 38.5%, transparent 43.5%,
+          rgb(40, 40, 40) 43.5%, rgb(40, 40, 40) 43.5%,
+          transparent 44%, transparent 49%,
+          rgb(40, 40, 40) 49%, rgb(40, 40, 40) 49%,
+          transparent 49.5%, transparent 54.5%,
+          rgb(40, 40, 40) 54.5%, rgb(40, 40, 40) 54.5%,
+          transparent 55%, transparent 60%,
+          rgb(40, 40, 40) 60%, rgb(40, 40, 40) 60%,
+          transparent 60.5%, transparent 65.5%,
+          rgb(40, 40, 40) 65.5%, rgb(40, 40, 40) 65.5%,
+          transparent 66%, transparent 71%,
+          rgb(40, 40, 40) 71%, rgb(40, 40, 40) 71%,
+          transparent 66.5%, transparent 71.5%,
+          rgb(40, 40, 40) 71.5%, rgb(40, 40, 40) 71.5%,
+          transparent 72%, transparent 77%,
+          rgb(40, 40, 40) 77%, rgb(40, 40, 40) 77%,
+          transparent 77.5%, transparent 82.5%,
+          rgb(40, 40, 40) 82.5%, rgb(40, 40, 40) 82.5%,
+          transparent 83%, transparent 88%,
+          rgb(40, 40, 40) 88%, rgb(40, 40, 40) 88%,
+          transparent 88.5%, transparent 93.5%,
+          rgb(40, 40, 40) 93.5%, rgb(40, 40, 40) 93.5%,
+          transparent 94%, transparent 100%,
+          black 90%, black 100%);
+    }
+
+    .black {
+      width: 65px;
+      height: 150px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-20%, -50%);
+      background: black;
+    }
+
+    .left {
+      width: 60px;
+      height: 150px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-675%, -50%);
+      border: 1px solid rgb(130, 130, 130);
+      border-radius: 10px;
+      background-color: rgb(239, 239, 239);
+      background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(224, 224, 224) 20%, rgb(255, 255, 255) 100%, transparent 50%);
+    }
+
+    .taiwan {
+      color: gray;
+      font-family: '微軟正黑體', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 200;
+      font-size: larger;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-170%, 115%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="back ">
+    <div class="center "></div>
+    <div class="taiwan">Made in Taiwan</div>
+    <div class="black"></div>
+    <div class="left "></div>
+  </div>
+</body>
+
+</html>
